@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>HYO</display-name>
+  <welcome-file-list>
+    <welcome-file>homepage.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+        <servlet-name>LoadHyoInc</servlet-name>
+        <servlet-class>com.operations.LoadHyoInc</servlet-class>
+    </servlet>
+   <servlet-mapping>
+        <servlet-name>LoadHyoInc</servlet-name>
+        <url-pattern>/loadAll</url-pattern>
+    </servlet-mapping>
+    
+   <servlet>
+    <servlet-name>searchProductOperations</servlet-name>
+    <servlet-class>com.operations.SearchProductOperations</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>searchProductOperations</servlet-name>
+    <url-pattern>/spops</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+        <servlet-name>deleteOperations</servlet-name>
+        <servlet-class>com.operations.DeleteOperations</servlet-class>
+    </servlet>
+   <servlet-mapping>
+        <servlet-name>deleteOperations</servlet-name>
+        <url-pattern>/del</url-pattern>
+    </servlet-mapping>
+</web-app>

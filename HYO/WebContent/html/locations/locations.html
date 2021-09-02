@@ -1,0 +1,31 @@
+<div>
+	<table  style="width:100%">
+   	 	<tr>
+   	 		<td>
+				 <md-input-container>
+			          <label style="color:rgb(63,81,181)">Search Locations</label>
+			          <input ng-change = "ctrl.searchOther('locations')" ng-model=ctrl.searchOtherKey>
+		         </md-input-container>
+			</td>
+	    </tr>
+	</table>
+</div>
+<div>
+	<table class="table table-bordered products" style="width:100%">
+	  <thead>
+	  <tr>
+	    <th>Location Name</th>
+	    <th>Location Code</th>
+	  </tr>
+	  </thead>
+	  <tbody>
+	  	<tr ng-repeat="location in ctrl.locationList" ng-click="ctrl.navigateToPage('ELO', location)">
+		  	<td>{{location.name}}</td>
+		  	<td>{{location.code}}</td>
+	  	</tr>
+	  </tbody>
+	</table>
+</div>
+<div>
+	<button type="button" style="background-color:rgb(63,81,181)" class="btn btn-primary" ng-click="ctrl.navigateToPage('ALO')">Add Location</button>
+</div>

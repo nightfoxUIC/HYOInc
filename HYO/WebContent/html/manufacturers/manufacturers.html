@@ -1,0 +1,31 @@
+<div>
+	<table  style="width:100%">
+   	 	<tr>
+   	 		<td>
+				 <md-input-container>
+			          <label style="color:rgb(63,81,181)">Search Manufacturers</label>
+			          <input ng-change = "ctrl.searchOther('manufacturers')" ng-model="ctrl.searchOtherKey">
+		         </md-input-container>
+			</td>
+	    </tr>
+	</table>
+</div>
+<div>
+	<table class="table table-bordered products" style="width:100%">
+	  <thead>
+	  <tr>
+	    <th>Manufacturer Name</th>
+	    <th>Manufacturer Code</th>
+	  </tr>
+	  </thead>
+	  <tbody>
+	  	<tr ng-repeat="manufacturer in ctrl.manufacturerList" ng-click="ctrl.navigateToPage('EMU',manufacturer)">
+		  	<td>{{manufacturer.name}}</td>
+		  	<td>{{manufacturer.code}}</td>
+	  	</tr>
+	  </tbody>
+	</table>
+</div>
+<div>
+	<button type="button" style="background-color:rgb(63,81,181)" class="btn btn-primary" ng-click="ctrl.navigateToPage('AMU')">Add Manufacturer</button>
+</div>

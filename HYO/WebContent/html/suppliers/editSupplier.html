@@ -1,0 +1,27 @@
+<div>
+	<table class="table">
+		<tr>
+			<td>
+				 <md-input-container>
+		          <label style="color:rgb(63,81,181)">Supplier Name:</label>
+		          <input ng-model="ctrl.editSupplier.name">
+		         </md-input-container>
+			</td>
+			<td>
+				<md-input-container>
+		          <label style="color:rgb(63,81,181)">Supplier Code:</label>
+		          <input ng-model="ctrl.editSupplier.code">
+		         </md-input-container>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				 <button type="button" style="background-color:rgb(63,81,181)" class="btn btn-primary" ng-click="ctrl.navigateToPage('SU')">Back</button>
+			</td>
+			<td>
+				<button type="button" style="background-color:rgb(63,81,181);" class="btn btn-primary" ng-click="ctrl.updateOther('SU','suppliers',ctrl.editSupplier)">Update Supplier</button>
+				<button type="button" style="background-color:rgb(63,81,181);" class="btn btn-primary" ng-click="ctrl.deleteOther('SU','suppliers',ctrl.editSupplier)">Delete Supplier</button>
+			</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,48 @@
+<div>
+	<table  style="width:100%">
+   	 	<tr>
+   	 		<td>
+				 <md-input-container>
+			          <label style="color:rgb(63,81,181)">Search Alert Inventory</label>
+			          <input ng-change = "ctrl.searchStockQtyItem()" ng-model="ctrl.searchKeyStockQty">
+		         </md-input-container>
+			</td>
+	    </tr>
+	</table>
+</div>
+<div>
+	<table class="table table-bordered products" style="width:100%">
+	  <thead>
+	  <tr>
+	    <th>Product ID</th>
+		<th>Product Description</th>
+		<th>Model</th>
+		<th>Manufacturer Code</th>
+		<th>Supplier Code</th>
+		<th>Item Type Code</th>
+		<th>Location Code</th>
+		<th>MSRP</th>
+		<th>Unit Cost</th>
+		<th>Discount Rate</th>
+		<th>Stock Qty</th>
+		<th>Last Updated</th>
+	  </tr>
+	  </thead>
+	  </tbody>
+	  <tr ng-repeat="item in ctrl.stockQtyList">
+	    <td>{{item.productID}}</td>
+		<td>{{item.product}}</td>
+		<td>{{item.model}}</td>
+		<td>{{item.manufacturerCode}}</td>
+		<td>{{item.supplierCode}}</td>
+		<td>{{item.itemTypeCode}}</td>
+		<td>{{item.locationCode}}</td>
+		<td>{{item.MSRP}}</td>
+		<td>{{item.unitCost}}</td>
+		<td>{{item.discountRate}}</td>
+		<td>{{item.stockQty}}</td>
+		<td>{{item.lastUpdated}}</td>
+	  </tr>
+	  </tbody>
+	</table>
+</div>

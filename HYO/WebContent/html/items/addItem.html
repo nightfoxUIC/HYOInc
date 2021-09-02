@@ -1,0 +1,113 @@
+<div>
+	<table class="table">
+		<tr>
+			<td>
+				 <md-input-container>
+		          <label style="color:rgb(63,81,181)">Product Id:</label>
+		          <input ng-model="ctrl.addItem.productID">
+		         </md-input-container>
+			</td>
+			<td>
+				<md-input-container>
+		          <label style="color:rgb(63,81,181)">Product Description:</label>
+		          <input ng-model="ctrl.addItem.product">
+		         </md-input-container>
+			</td>
+			<td>
+				<md-input-container>
+		          <label style="color:rgb(63,81,181)">Model:</label>
+		          <input ng-model="ctrl.addItem.model">
+		         </md-input-container>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			  <md-input-container>
+		          <label>Manufacturer Code:</label>
+		          <md-select ng-model="ctrl.addItem.manufacturerCode">
+		            <md-option><em>None</em></md-option>
+		            <md-option ng-repeat="manufacturer in ctrl.allDetailsMap['manufacturers']" ng-value="manufacturer.code">
+		              {{manufacturer.name}}:{{manufacturer.code}}
+		            </md-option>
+		          </md-select>
+		       </md-input-container>
+			</td>
+			<td>
+			  <md-input-container>
+		          <label style="color:rgb(63,81,181)">Supplier Code:</label>
+		          <md-select ng-model="ctrl.addItem.supplierCode">
+		            <md-option><em>None</em></md-option>
+		            <md-option ng-repeat="supplier in ctrl.allDetailsMap['suppliers']" ng-value="supplier.code">
+		              {{supplier.name}}:{{supplier.code}}
+		            </md-option>
+		          </md-select>
+		       </md-input-container>
+			</td>
+			<td>
+			  <md-input-container>
+		          <label style="color:rgb(63,81,181)">Item Type Code:</label>
+		          <md-select ng-model="ctrl.addItem.itemTypeCode">
+		            <md-option><em>None</em></md-option>	
+		            <md-option ng-repeat="itemType in ctrl.allDetailsMap['itemTypes']" ng-value="itemType.code">
+		              {{itemType.name}}:{{itemType.code}}
+		            </md-option>
+		          </md-select>
+		       </md-input-container>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			  <md-input-container>
+		          <label style="color:rgb(63,81,181)">Location Code:</label>
+		          <md-select ng-model="ctrl.addItem.locationCode">
+		            <md-option><em>None</em></md-option>
+		            <md-option ng-repeat="location in ctrl.allDetailsMap['locations']" ng-value="location.code">
+		              {{location.name}}:{{location.code}}
+		            </md-option>
+		          </md-select>
+		       </md-input-container>
+			</td>
+			<td>
+				<md-input-container>
+		          <label style="color:rgb(63,81,181)">MSRP:</label>
+		          <input ng-model="ctrl.addItem.MSRP">
+		         </md-input-container>
+			</td>
+			<td>
+				<md-input-container>
+		          <label style="color:rgb(63,81,181)">Unit Cost:</label>
+		          <input ng-model="ctrl.addItem.unitCost">
+		         </md-input-container>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<md-input-container>
+		          <label style="color:rgb(63,81,181)">Discount Rate:</label>
+		          <input ng-model="ctrl.addItem.discountRate">
+		         </md-input-container>
+			</td>
+			<td>
+				<md-input-container>
+		          <label style="color:rgb(63,81,181)">Stock Quantity:</label>
+		          <input ng-model="ctrl.addItem.stockQty">
+		         </md-input-container>
+			</td>
+			<td>
+				 <div flex-gt-xs>
+			      <md-datepicker style="color:rgb(63,81,181)" ng-model="ctrl.addItem.lastUpdated" md-placeholder="Enter date"></md-datepicker>
+			    </div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button type="button" style="background-color:rgb(63,81,181)" class="btn btn-primary" ng-click="ctrl.navigateToPage('SP')">Back</button>
+			</td>
+			<td>
+			</td>
+			<td>
+				<button type="button" style="background-color:rgb(63,81,181);float:right" class="btn btn-primary" ng-click="ctrl.saveItem()">Save Item</button>
+			</td>
+		</tr>
+	</table>
+</div>

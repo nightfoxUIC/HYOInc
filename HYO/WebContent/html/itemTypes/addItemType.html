@@ -1,0 +1,26 @@
+<div>
+	<table class="table">
+		<tr>
+			<td>
+				 <md-input-container>
+		          <label style="color:rgb(63,81,181)">Item Type Name:</label>
+		          <input ng-model="ctrl.addItemType.name">
+		         </md-input-container>
+			</td>
+			<td>
+				<md-input-container>
+		          <label style="color:rgb(63,81,181)">Item Type Code:</label>
+		          <input ng-model="ctrl.addItemType.code">
+		         </md-input-container>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				 <button type="button" style="background-color:rgb(63,81,181)" class="btn btn-primary" ng-click="ctrl.navigateToPage('IT')">Back</button>
+			</td>
+			<td>
+				<button type="button" style="background-color:rgb(63,81,181);float:right" class="btn btn-primary" ng-click="ctrl.saveOther('IT','itemTypes',ctrl.addItemType)">Save Item Type</button>
+			</td>
+		</tr>
+	</table>
+</div>
